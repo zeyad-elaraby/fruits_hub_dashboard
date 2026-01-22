@@ -7,19 +7,27 @@ class DashboardViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10.0),
-          child: CustomElevatedButton(
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 10.0),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        spacing: 10,
+        children: [
+          CustomElevatedButton(
             onPressed: () {
               Navigator.pushNamed(context, AppRoutes.addProductView);
             },
             title: "add products",
           ),
-        ),
-      ],
+
+          CustomElevatedButton(
+            onPressed: () {
+              Navigator.pushNamed(context, AppRoutes.ordersView);
+            },
+            title: "View orders",
+          ),
+        ],
+      ),
     );
   }
 }

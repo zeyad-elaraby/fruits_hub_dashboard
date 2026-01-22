@@ -18,6 +18,7 @@ class AddProductInputModel {
   final num ratingCount;
   final int unitAmount;
   final List<ReviewModel> reviews;
+  final int sellingCount;
 
   AddProductInputModel({
     required this.name,
@@ -34,6 +35,7 @@ class AddProductInputModel {
     this.ratingCount = 0,
     required this.unitAmount,
     required this.reviews,
+    this.sellingCount = 0,
   });
 
   factory AddProductInputModel.fromEntity(AddProductInputEntity entity) =>
@@ -69,5 +71,6 @@ class AddProductInputModel {
     'ratingCount': ratingCount,
     'unitAmount': unitAmount,
     "reviews": reviews.map((e) => e.toJson()).toList(),
+    "sellingCount": sellingCount,
   };
 }
