@@ -1,0 +1,14 @@
+class OrderProductEntity {
+  final String name;
+  final String code;
+  final String imageUrl;
+  final double price;
+  final int count;
+  OrderProductEntity({
+    required this.name,
+    required this.code,
+    required this.imageUrl,
+    required this.price,
+    required this.count,
+  });
+}

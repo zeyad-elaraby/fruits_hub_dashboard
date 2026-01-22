@@ -6,4 +6,6 @@ class BackEndPoints {
   static const String getUserData = 'users';
   static const String checkIfUserExists = 'users';
   static const String addProducts = 'products';
+  static const String getOrders = 'orders';
+  static const String updateOrders = 'orders';
 }

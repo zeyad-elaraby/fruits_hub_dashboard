@@ -42,16 +42,20 @@ class CustomElevatedButton extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             suffixIcon ?? SizedBox.shrink(),
-            if (suffixIcon != null) SizedBox(width: 24.w),
-            Text(
-              title,
-              style:
-                  textStyle ??
-                  TextStyle(color: AppColors.whiteColor, fontSize: 20.sp),
-              // getMediumStyle(color: AppColors.whiteColor, fontSize: 20.sp),
+            if (prefixIcon != null) ...[prefixIcon!, SizedBox(width: 24.w)],
+            Flexible(
+              child: FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text(
+                  title,
+                  style:
+                      textStyle ??
+                      TextStyle(color: AppColors.whiteColor, fontSize: 20.sp),
+                  // getMediumStyle(color: AppColors.whiteColor, fontSize: 20.sp),
+                ),
+              ),
             ),
-            if (suffixIcon != null) SizedBox(width: 27.w),
-
+            if (suffixIcon != null) ...[SizedBox(width: 24.w), suffixIcon!],
             prefixIcon ?? SizedBox.shrink(),
           ],
         ),
